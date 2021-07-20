@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="col-xs-12">
+    <h1>{{ camp.city }}</h1>
+    Adresse : <h3>{{camp.address}}</h3>
+    <h3>nombre d'habitants : {{ camp.nbPeople }}</h3>
+    <p>Association : {{ camp.association_name }}</p>
+    <p>{{ camp.description }}</p>
+    <button class="btn btn-default" (click)="onBack()">Retour</button>
+    <button class="btn btn-default" (click)="onHelp(camp.id)">Aider le camp</button>
+  </div>
+</div>

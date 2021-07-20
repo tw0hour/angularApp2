@@ -1,0 +1,12 @@
+.container-list-camp{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+}
+
+.camp-item{
+  flex: 25%; /* explanation below */
+  margin: 5px;
+  height: 100px;
+}

@@ -1,0 +1,17 @@
+<h2 align="center">Camps</h2>
+<div class=" container-list-camp">
+  <button
+    class="list-group-item camp-item"
+    *ngFor="let camp of camps"
+    (click)="onDetailsCamp(camp.id)">
+    <h3 class="">
+      camp à {{ camp.city }}
+      <button class="btn btn-default pull-right">
+        <span class="glyphicon glyphicon-minus"></span>
+      </button>
+    </h3>
+    <p class="list-group-item-text">{{ camp.address }}</p>
+  </button>
+</div>
+
+

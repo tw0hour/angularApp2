@@ -1,0 +1,25 @@
+<div formArrayName="foods">
+  <h3>Nourriture</h3>
+  <div class="form-group" *ngFor="let foodsControl of getFoods().controls; let i = index">
+    <input type="text" class="form-control" [formControlName]="i">
+  </div>
+  <button type="button" class="btn btn-success" (click)="onAddFoods()">Ajouter un de la nourriture</button>
+</div>
+<div formArrayName="clothes">
+  <h3>Vetements</h3>
+  <div class="form-group" *ngFor="let clothesControl of getClothes().controls; let i = index">
+    <input type="text" class="form-control" [formControlName]="i">
+  </div>
+  <button type="button" class="btn btn-success" (click)="onAddClothes()">Ajouter un des vetements</button>
+</div>
+
+<div formArrayName="medocs">
+  <h3>Médicaments</h3>
+  <div class="form-group" *ngFor="let medocsControl of getMedocs().controls; let i = index">
+    <input type="text" class="form-control" [formControlName]="i">
+  </div>
+  <button type="button" class="btn btn-success" (click)="onAddMedocs()">Ajouter un des Médicements</button>
+</div>
+
+
+<button type="submit" class="btn btn-primary" [disabled]="helpCampForm.invalid">Soumettre</button>
