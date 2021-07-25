@@ -35,7 +35,8 @@ export class InscriptionComponent implements OnInit {
     const newUser = new UserModel(
       formValue['name'],
       formValue['password'],
-      formValue['email']
+      formValue['email'],
+      "normal"
     );
 
     this.userService.inscription(newUser)
@@ -49,7 +50,7 @@ export class InscriptionComponent implements OnInit {
         },
         (error)=>{
           console.log(error);
-          this.errorMessage = error.error;
+          this.errorMessage = error.error.error;
         }
       );
   }

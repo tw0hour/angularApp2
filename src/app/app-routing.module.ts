@@ -8,6 +8,8 @@ import {HelpCampComponent} from "./list-camp/help-camp/help-camp.component";
 import {ListDeliveryComponent} from "./list-delivery/list-delivery.component";
 import {AuthGuardService} from "./service/authGuard.service";
 import {ListAssocComponent} from "./list-assoc/list-assoc.component";
+import {DetailsAssocComponent} from "./list-assoc/details-assoc/details-assoc.component";
+import {DonnationAssocComponent} from "./list-assoc/donnation-assoc/donnation-assoc.component";
 
 const routes: Routes = [
   { path: 'connection', component: ConnectionComponent },
@@ -15,8 +17,10 @@ const routes: Routes = [
   { path: 'list-camp', component: ListCampComponent },
   { path: 'details-camp/:id', component: DetailsCampComponent },
   { path: 'help-camp/:id', canActivate: [AuthGuardService], component: HelpCampComponent },
-  {path: 'list-delivery', canActivate: [AuthGuardService], component: ListDeliveryComponent },
-  {path: 'list-assoc', component: ListAssocComponent},
+  { path: 'list-delivery', canActivate: [AuthGuardService], component: ListDeliveryComponent },
+  { path: 'list-assoc', component: ListAssocComponent},
+  { path: 'details-assoc/:id', component: DetailsAssocComponent },
+  { path: 'donnation-assoc/:id', component: DonnationAssocComponent },
   { path: '', component: ListCampComponent, pathMatch: 'full' },
   { path: '**', redirectTo: 'list-camp' }
 ];

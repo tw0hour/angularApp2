@@ -19,6 +19,9 @@ import { HeaderComponent } from './header/header.component';
 import {AuthGuardService} from "./service/authGuard.service";
 import { ListAssocComponent } from './list-assoc/list-assoc.component';
 import {AssocService} from "./service/assoc.service";
+import { DetailsAssocComponent } from './list-assoc/details-assoc/details-assoc.component';
+import { DonnationAssocComponent } from './list-assoc/donnation-assoc/donnation-assoc.component';
+import {DonationService} from "./service/donation.service";
 
 @NgModule({
   declarations: [
@@ -31,7 +34,9 @@ import {AssocService} from "./service/assoc.service";
     ListDeliveryComponent,
     NotFoundComponent,
     HeaderComponent,
-    ListAssocComponent
+    ListAssocComponent,
+    DetailsAssocComponent,
+    DonnationAssocComponent
   ],
   imports: [
     BrowserModule,
@@ -44,6 +49,7 @@ import {AssocService} from "./service/assoc.service";
     AuthService,
     CampService,
     DeliveryService,
+    DonationService,
     AssocService,
     AuthGuardService
   ],

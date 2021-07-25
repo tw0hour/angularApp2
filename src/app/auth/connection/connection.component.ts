@@ -42,7 +42,7 @@ export class ConnectionComponent implements OnInit {
         },
         (error)=>{
           console.log(error);
-          this.errorMessage = error.error;
+          this.errorMessage = error.error.error;
         }
       );
   }

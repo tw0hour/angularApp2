@@ -12,11 +12,11 @@ export class AuthService {
   }
 
   inscription(user: UserModel):Observable<UserModel>{
-    return this.http.post<UserModel>(this.apiUrl+'/new',user);
+    return this.http.post<UserModel>(this.apiUrl+'/',user);
   }
 
   connection(email: string, password: string):Observable<UserModel>{
-    return this.http.post<UserModel>(this.apiUrl+'/connection',{"mail":email,"password":password});
+    return this.http.post<UserModel>(this.apiUrl+'/connection',{"email":email,"password":password});
   }
 
   logOut(){
