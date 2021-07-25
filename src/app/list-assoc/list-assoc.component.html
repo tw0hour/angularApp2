@@ -1,0 +1,14 @@
+<h2 align="center">Associations</h2>
+<div class=" container-list-assoc">
+  <button
+    class="list-group-item assoc-item"
+    *ngFor="let assoc of assocs"
+    (click)="onDetailsAssoc(assoc.id)">
+    <h3 class="">
+       {{ assoc.name }}
+      <button class="btn btn-default pull-right">
+        <span class="glyphicon glyphicon-minus"></span>
+      </button>
+    </h3>
+  </button>
+</div>

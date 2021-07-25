@@ -1,0 +1,25 @@
+<nav style="background-color: #25283D" class="navbar navbar-expand-lg my-nav" >
+<!--  <nav class="my-nav">-->
+  <a routerLink="/list-camp" class="navbar-brand" style="color: #f0ebfc">Human-helper</a>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" routerLinkActive="active" routerLink="list-camp">Camps</a>
+      <a class="nav-item nav-link active" routerLinkActive="active" routerLink="list-delivery">Livraisons efféctuées</a>
+      <a class="nav-item nav-link active" routerLinkActive="active" routerLink="list-assoc">Associations</a>
+    </div>
+  </div>
+  <ul class="nav" >
+    <li class="auth-header" routerLinkActive="active" *ngIf="!isAuth">
+      <a routerLink="inscription">Créer un compte</a>
+    </li>
+    <li class="auth-header" routerLinkActive="active" *ngIf="!isAuth">
+      <a routerLink="connection">Connexion</a>
+    </li>
+    <li class="auth-header"*ngIf="isAuth">
+      <a (click)="onSignOut()"
+         style="cursor:pointer">Déconnexion</a>
+    </li>
+  </ul>
+<!--  </nav>-->
+</nav>
+
