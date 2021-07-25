@@ -1,0 +1,20 @@
+<h3>Nourriture</h3>
+  <form [formGroup]="foodForm" (ngSubmit)="onSubmitFormFood()">
+    <div class="form-group">
+      <label for="name">name</label>
+      <input type="text" id="name" class="form-control" formControlName="name">
+    </div>
+    <label for="name">type de nourriture</label>
+    <select class="form-select" formControlName="typesFood">
+      <option *ngFor="let typeFood of typesFood" ngDefaultControl [value]="typeFood.id">
+        {{typeFood.type}}
+      </option>
+    </select>
+
+    <div class="form-group">
+      <label for="expirationDate">date expiration</label>
+      <input type="date" id="expirationDate" class="form-control" formControlName="expirationDate">
+    </div>
+    <p class="text-danger">{{ message }}</p>
+    <button type="button" class="btn btn-success" [disabled]="foodForm.invalid">Envoyer la nourriture</button>
+  </form>

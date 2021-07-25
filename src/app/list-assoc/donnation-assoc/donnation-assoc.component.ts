@@ -28,12 +28,16 @@ export class DonnationAssocComponent implements OnInit {
 
   initForm() {
     this.donnationForm = this.formBuilder.group({
-      amount_given: ['',[Validators.required]]
+      amount_given: ['',[Validators.required,Validators.pattern('\\d+'),Validators.min(1)]]
     });
   }
 
   onSubmitForm() {
     const formValue = this.donnationForm.value;
+    if(typeof formValue['amount_given'] != "number" || formValue['amount-given'] < 0){
+      this.errorMessage = "rentrez un nombre superieur à zero";
+      return
+    }
     const donation = new DonnationModel(formValue['amount_given'],this.idAssoc,parseInt(localStorage.getItem("token")),"02/06/2015")
     this.donnationService.add(donation)
       .subscribe(
@@ -45,6 +49,10 @@ export class DonnationAssocComponent implements OnInit {
           this.errorMessage = error.error.error;
         }
       );
+  }
+
+  onBack(){
+    this.router.navigate(['/details-assoc',this.idAssoc]);
   }
 
 }

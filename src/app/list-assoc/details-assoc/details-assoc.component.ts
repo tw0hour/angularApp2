@@ -36,4 +36,8 @@ export class DetailsAssocComponent implements OnInit {
   onBack(){
     this.router.navigate(['/list-assoc']);
   }
+
+  onHelp(id:number){
+    this.router.navigate(['/help-assoc',id]);
+  }
 }

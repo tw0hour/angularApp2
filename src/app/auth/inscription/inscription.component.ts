@@ -50,7 +50,7 @@ export class InscriptionComponent implements OnInit {
         },
         (error)=>{
           console.log(error);
-          this.errorMessage = error.error.error;
+          this.errorMessage = error.error;
         }
       );
   }

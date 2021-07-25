@@ -28,7 +28,7 @@ export class DetailsCampComponent implements OnInit {
   }
 
   onHelp(id: number){
-    this.router.navigate(['/help-camp',id]);
+    this.router.navigate(['/help-assoc',id]);
   }
 
   onBack(){

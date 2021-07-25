@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HelpCampComponent } from './help-camp.component';
+import { HelpAssocComponent } from './help-assoc.component';
 
 describe('HelpCampComponent', () => {
-  let component: HelpCampComponent;
-  let fixture: ComponentFixture<HelpCampComponent>;
+  let component: HelpAssocComponent;
+  let fixture: ComponentFixture<HelpAssocComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HelpCampComponent ]
+      declarations: [ HelpAssocComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HelpCampComponent);
+    fixture = TestBed.createComponent(HelpAssocComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
